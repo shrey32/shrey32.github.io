@@ -3,7 +3,7 @@ import { ViewService } from './../../services/view-service';
 import { Component, OnInit } from '@angular/core';
 import { ViewType } from '../../enums/view-type';
 //declare let Email: any;
-import '../../../assets/js/smtp.js';
+import {Email} from '../../../assets/js/smtp.js';
 
 @Component({
   selector: 'app-contact',

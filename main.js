@@ -121,8 +121,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_skills_skills_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/skills/skills.component */ "./src/app/views/skills/skills.component.ts");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+
 
 
 
@@ -135,23 +137,25 @@ __webpack_require__.r(__webpack_exports__);
 
 class AppModule {
 }
-AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]] });
+AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]] });
 AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"]
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"]
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
         _views_header_header_component__WEBPACK_IMPORTED_MODULE_3__["HeaderComponent"],
         _views_about_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"],
         _views_work_work_component__WEBPACK_IMPORTED_MODULE_1__["WorkComponent"],
         _views_skills_skills_component__WEBPACK_IMPORTED_MODULE_4__["SkillsComponent"],
         _views_contact_contact_component__WEBPACK_IMPORTED_MODULE_0__["ContactComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
-        _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"]] }); })();
+        _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["NgModule"],
         args: [{
                 declarations: [
-                    _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
+                    _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
                     _views_header_header_component__WEBPACK_IMPORTED_MODULE_3__["HeaderComponent"],
                     _views_about_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"],
                     _views_work_work_component__WEBPACK_IMPORTED_MODULE_1__["WorkComponent"],
@@ -160,10 +164,11 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjector
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
-                    _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"]
+                    _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"]
                 ],
                 providers: [],
-                bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
+                bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
             }]
     }], null, null); })();
 
@@ -352,14 +357,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactComponent", function() { return ContactComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _enums_view_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../enums/view-type */ "./src/app/enums/view-type.ts");
-/* harmony import */ var _services_view_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../services/view-service */ "./src/app/services/view-service.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _assets_js_smtp_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../assets/js/smtp.js */ "./src/assets/js/smtp.js");
+/* harmony import */ var _services_view_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../services/view-service */ "./src/app/services/view-service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+
+
+//declare let Email: any;
 
 
 
 
 
 function ContactComponent_section_0_Template(rf, ctx) { if (rf & 1) {
+    const _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section", 1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 3);
@@ -393,10 +404,17 @@ function ContactComponent_section_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "h2", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Contact me");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](22, "input", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "input", 15);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "textarea", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "input", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function ContactComponent_section_0_Template_input_ngModelChange_22_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2); const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r1.name = $event; });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "input", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function ContactComponent_section_0_Template_input_ngModelChange_23_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2); const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r3.email = $event; });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "textarea", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function ContactComponent_section_0_Template_textarea_ngModelChange_24_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2); const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r4.message = $event; });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "button", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ContactComponent_section_0_Template_button_click_25_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2); const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r5.sendMail(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Submit");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "p");
@@ -405,29 +423,75 @@ function ContactComponent_section_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx_r0.name);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx_r0.email);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx_r0.message);
 } }
 class ContactComponent {
     constructor(viewService) {
         this.viewService = viewService;
         this.type = _enums_view_type__WEBPACK_IMPORTED_MODULE_1__["ViewType"].CONTACT;
+        this.sendMail = () => {
+            const validationInfo = this.validate();
+            if (validationInfo.error) {
+                alert(validationInfo.msg);
+            }
+            else {
+                _assets_js_smtp_js__WEBPACK_IMPORTED_MODULE_2__["Email"].send({
+                    Host: 'smtp.elasticemail.com',
+                    Username: 'sharmashrey032@gmail.com',
+                    Password: '523A1DEA530787576154958814EBC7AC6F22',
+                    To: 'sharmashrey032@gmail.com',
+                    From: 'sharmashrey032@gmail.com',
+                    Subject: 'Email From ' + this.name + " (" + this.email + ")",
+                    Body: this.message
+                }).then(message => { alert(message); this.name = ''; this.email = ''; this.message = ''; });
+            }
+        };
+        this.validate = () => {
+            if (!this.name || this.name.trim() === '') {
+                return { error: true, msg: "Please enter Name" };
+            }
+            else if (!this.email || this.email.trim() === '') {
+                return { error: true, msg: "Please enter Email" };
+            }
+            else if (!this.validateEmail(this.email)) {
+                return { error: true, msg: "Email is invalid" };
+            }
+            else if (!this.message || this.message.trim() === '') {
+                return { error: true, msg: "Please enter message" };
+            }
+            else {
+                return { error: false };
+            }
+        };
+        this.validateEmail = (email) => {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        };
     }
     ngOnInit() {
         console.log("Contact Component Initialized");
     }
 }
-ContactComponent.ɵfac = function ContactComponent_Factory(t) { return new (t || ContactComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_view_service__WEBPACK_IMPORTED_MODULE_2__["ViewService"])); };
-ContactComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ContactComponent, selectors: [["app-contact"]], decls: 1, vars: 1, consts: [["class", "text-gray-700 body-font relative", 4, "ngIf"], [1, "text-gray-700", "body-font", "relative"], [1, "container", "px-5", "py-24", "mx-auto", "flex", "sm:flex-no-wrap", "flex-wrap", 2, "padding-top", "0px", "padding-bottom", "0px"], [1, "lg:w-2/3", "md:w-1/2", "bg-gray-300", "rounded-lg", "overflow-hidden", "sm:mr-10", "p-10", "flex", "items-end", "justify-start", "relative"], ["width", "100%", "height", "100%", "frameborder", "0", "title", "map", "marginheight", "0", "marginwidth", "0", "scrolling", "no", "src", "https://maps.google.com/maps?width=100%&height=600&hl=en&q=Cambridge+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed", 1, "absolute", "inset-0", 2, "filter", "grayscale(1) contrast(1.2) opacity(0.4)"], [1, "bg-white", "relative", "flex", "flex-wrap", "py-6"], [1, "lg:w-1/2", "px-6"], [1, "title-font", "font-medium", "text-gray-900", "tracking-widest", "text-sm"], [1, "leading-relaxed"], [1, "lg:w-1/2", "px-6", "mt-4", "lg:mt-0"], [1, "text-orange-500", "leading-relaxed"], [1, "title-font", "font-medium", "text-gray-900", "tracking-widest", "text-sm", "mt-4"], [1, "lg:w-1/3", "md:w-1/2", "bg-white", "flex", "flex-col", "md:ml-auto", "w-full", "md:py-8", "mt-8", "md:mt-0"], [1, "text-gray-900", "text-lg", "mb-1", "font-medium", "title-font"], ["placeholder", "Name", "type", "text", 1, "bg-white", "rounded", "border", "border-gray-400", "focus:outline-none", "focus:border-orange-500", "text-base", "px-4", "py-2", "mb-4"], ["placeholder", "Email", "type", "email", 1, "bg-white", "rounded", "border", "border-gray-400", "focus:outline-none", "focus:border-orange-500", "text-base", "px-4", "py-2", "mb-4"], ["placeholder", "Message", 1, "bg-white", "rounded", "border", "border-gray-400", "focus:outline-none", "h-32", "focus:border-orange-500", "text-base", "px-4", "py-2", "mb-4", "resize-none"], [1, "text-white", "bg-orange-500", "border-0", "py-2", "px-6", "focus:outline-none", "hover:bg-orange-600", "rounded", "text-lg"]], template: function ContactComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, ContactComponent_section_0_Template, 29, 0, "section", 0);
+ContactComponent.ɵfac = function ContactComponent_Factory(t) { return new (t || ContactComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_view_service__WEBPACK_IMPORTED_MODULE_3__["ViewService"])); };
+ContactComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ContactComponent, selectors: [["app-contact"]], decls: 1, vars: 1, consts: [["class", "text-gray-700 body-font relative", 4, "ngIf"], [1, "text-gray-700", "body-font", "relative"], [1, "container", "px-5", "py-24", "mx-auto", "flex", "sm:flex-no-wrap", "flex-wrap", 2, "padding-top", "0px", "padding-bottom", "0px"], [1, "lg:w-2/3", "md:w-1/2", "bg-gray-300", "rounded-lg", "overflow-hidden", "sm:mr-10", "p-10", "flex", "items-end", "justify-start", "relative"], ["width", "100%", "height", "100%", "frameborder", "0", "title", "map", "marginheight", "0", "marginwidth", "0", "scrolling", "no", "src", "https://maps.google.com/maps?width=100%&height=600&hl=en&q=Cambridge+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed", 1, "absolute", "inset-0", 2, "filter", "grayscale(1) contrast(1.2) opacity(0.4)"], [1, "bg-white", "relative", "flex", "flex-wrap", "py-6"], [1, "lg:w-1/2", "px-6"], [1, "title-font", "font-medium", "text-gray-900", "tracking-widest", "text-sm"], [1, "leading-relaxed"], [1, "lg:w-1/2", "px-6", "mt-4", "lg:mt-0"], [1, "text-orange-500", "leading-relaxed"], [1, "title-font", "font-medium", "text-gray-900", "tracking-widest", "text-sm", "mt-4"], [1, "lg:w-1/3", "md:w-1/2", "bg-white", "flex", "flex-col", "md:ml-auto", "w-full", "md:py-8", "mt-8", "md:mt-0"], [1, "text-gray-900", "text-lg", "mb-1", "font-medium", "title-font"], ["placeholder", "Name", "type", "text", 1, "bg-white", "rounded", "border", "border-gray-400", "focus:outline-none", "focus:border-orange-500", "text-base", "px-4", "py-2", "mb-4", 3, "ngModel", "ngModelChange"], ["placeholder", "Email", "type", "email", 1, "bg-white", "rounded", "border", "border-gray-400", "focus:outline-none", "focus:border-orange-500", "text-base", "px-4", "py-2", "mb-4", 3, "ngModel", "ngModelChange"], ["placeholder", "Message", 1, "bg-white", "rounded", "border", "border-gray-400", "focus:outline-none", "h-32", "focus:border-orange-500", "text-base", "px-4", "py-2", "mb-4", "resize-none", 3, "ngModel", "ngModelChange"], [1, "text-white", "bg-orange-500", "border-0", "py-2", "px-6", "focus:outline-none", "hover:bg-orange-600", "rounded", "text-lg", 3, "click"]], template: function ContactComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, ContactComponent_section_0_Template, 29, 3, "section", 0);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.viewService.getViewType() == ctx.type);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"]], encapsulation: 2 });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgModel"]], encapsulation: 2 });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ContactComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
                 selector: 'app-contact',
                 templateUrl: './contact.component.html'
             }]
-    }], function () { return [{ type: _services_view_service__WEBPACK_IMPORTED_MODULE_2__["ViewService"] }]; }, null); })();
+    }], function () { return [{ type: _services_view_service__WEBPACK_IMPORTED_MODULE_3__["ViewService"] }]; }, null); })();
 
 
 /***/ }),
@@ -910,6 +974,44 @@ WorkComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComp
             }]
     }], function () { return [{ type: _services_view_service__WEBPACK_IMPORTED_MODULE_2__["ViewService"] }]; }, null); })();
 
+
+/***/ }),
+
+/***/ "./src/assets/js/smtp.js":
+/*!*******************************!*\
+  !*** ./src/assets/js/smtp.js ***!
+  \*******************************/
+/*! exports provided: Email */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Email", function() { return Email; });
+/* SmtpJS.com - v3.0.0 */
+const Email = {
+    send: function(a) {
+        return new Promise(function(n, e) {
+            a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send";
+            var t = JSON.stringify(a);
+            Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function(e) { n(e) })
+        })
+    },
+    ajaxPost: function(e, n, t) {
+        var a = Email.createCORSRequest("POST", e);
+        a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function() {
+            var e = a.responseText;
+            null != t && t(e)
+        }, a.send(n)
+    },
+    ajax: function(e, n) {
+        var t = Email.createCORSRequest("GET", e);
+        t.onload = function() {
+            var e = t.responseText;
+            null != n && n(e)
+        }, t.send()
+    },
+    createCORSRequest: function(e, n) { var t = new XMLHttpRequest; return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t }
+};
 
 /***/ }),
 
