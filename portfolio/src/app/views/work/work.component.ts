@@ -1,6 +1,7 @@
 import { ViewType } from './../../enums/view-type';
 import { ViewService } from './../../services/view-service';
 import { Component, OnInit } from '@angular/core';
+import {WORK_EXPERIENCE} from '../../utils/constants';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class WorkComponent implements OnInit {
 
   type:ViewType = ViewType.WORK
+  workExperience = WORK_EXPERIENCE
 
   constructor(public viewService: ViewService) {
 

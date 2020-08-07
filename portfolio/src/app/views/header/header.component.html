@@ -5,39 +5,15 @@
         </a>
         <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
             <ul class="flex">
-                <li class="mr-3">
-                    <a [ngClass]="{'border-orange-500 bg-orange-500 text-white':viewService.getViewTypeStr()==='ABOUT','hover:border-gray-200 hover:bg-gray-200 text-orange-500':viewService.getViewTypeStr()!=='ABOUT'}" class="inline-block border border-white rounded py-1 px-3"
-                        href="#" (click)="onHeaderMenuClick('ABOUT')">About</a>
-                </li>
-                <li class="mr-3">
-                    <a [ngClass]="{'border-orange-500 bg-orange-500 text-white':viewService.getViewTypeStr()==='WORK','hover:border-gray-200 hover:bg-gray-200 text-orange-500':viewService.getViewTypeStr()!=='WORK'}" class="inline-block border border-white rounded py-1 px-3"
-                        href="#" (click)="onHeaderMenuClick('WORK')">Work</a>
-                </li>
-                <li class="mr-3">
-                    <a [ngClass]="{'border-orange-500 bg-orange-500 text-white':viewService.getViewTypeStr()==='SKILLS','hover:border-gray-200 hover:bg-gray-200 text-orange-500':viewService.getViewTypeStr()!=='SKILLS'}" class="inline-block border border-white rounded py-1 px-3"
-                        href="#" (click)="onHeaderMenuClick('SKILLS')">Skills</a>
-                </li>
-                <li class="mr-3">
-                    <a [ngClass]="{'border-orange-500 bg-orange-500 text-white':viewService.getViewTypeStr()==='CONTACT','hover:border-gray-200 hover:bg-gray-200 text-orange-500':viewService.getViewTypeStr()!=='CONTACT'}" class="inline-block border border-white rounded py-1 px-3 "
-                        href="# " (click)="onHeaderMenuClick('CONTACT')">Contact</a>
+                <li class="mr-3" *ngFor="let view of headerViews">
+                    <a [ngClass]="{'border-orange-500 bg-orange-500 text-white':viewService.getViewTypeStr()===view.name,'hover:border-gray-200 hover:bg-gray-200 text-orange-500':viewService.getViewTypeStr()!==view.name}" class="inline-block border border-white rounded py-1 px-3"
+                        href="#" (click)="onHeaderMenuClick(view.name)">{{view.label}}</a>
                 </li>
             </ul>
         </nav>
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start ">
-          <a class="text-gray-500 " href="https://www.github.com/shrey32 " style="margin-right: 10px; ">
-            <img height="24 " width="24 " src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg " />
-          </a>
-          <a class="text-gray-500 " href="https://www.linkedin.com/in/shrey-sharma-a6b906105/ " style="margin-right: 10px; ">
-            <img height="24 " width="24 " src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg " />
-          </a>
-          <a class="text-gray-500 " href="https://www.facebook.com/shreyyyy " style="margin-right: 10px; ">
-            <img height="24 " width="24 " src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg " />
-          </a>
-          <a class="text-gray-500 " href="https://twitter.com/shrey_mode " style="margin-right: 10px; ">
-            <img height="24 " width="24 " src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg " />
-          </a>
-          <a class="text-gray-500 " href="https://www.instagram.com/me_shreys/ " style="margin-right: 10px; ">
-            <img height="24 " width="24 " src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg " />
+          <a *ngFor="let social of socialMedia" class="text-gray-500" href="{{social.link}}" style="margin-right: 10px; ">
+            <img height="24 " width="24 " src="{{social.icon}}" />
           </a>
         </span>
     </div>
