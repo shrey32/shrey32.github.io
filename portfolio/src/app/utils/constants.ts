@@ -2,11 +2,17 @@ export const VIEW_ABOUT: string = "ABOUT";
 export const VIEW_WORK: string = "WORK";
 export const VIEW_SKILLS: string = "SKILLS";
 export const VIEW_CONTACT: string = "CONTACT";
+export const VIEW_CAREER: string = "CAREER";
 
-export const views = [{ name: VIEW_ABOUT, label: "About" }, { name: VIEW_WORK, label: "Work" }, /*{ name: VIEW_SKILLS, label: "Skills" },*/ { name: VIEW_CONTACT, label: "Contact" }];
+export const views = [{ name: VIEW_ABOUT, label: "About" }, { name: VIEW_WORK, label: "Work" }, { name: VIEW_CAREER, label: "Career" }, { name: VIEW_CONTACT, label: "Contact" }];
 
 export const WORK_EXPERIENCE = [
   {
+    companyName: "EMBL-EBI",
+    tenure: "(April-2020 to Present)",
+    designation: "Fullstack Software Engineer",
+    image: "../../assets/embl.png"
+  }, {
     companyName: "Morgan Stanley",
     tenure: "(August-2017 to April-2020)",
     designation: "Fullstack Software Engineer",
@@ -48,7 +54,7 @@ export const SKILL_SET = [
   }
 ];
 
-export const OTHER_WORKS = [];
+export const OTHER_WORKS = [{ projectName: "Node Chat App", "description": "Simple Chat application using NodeJS Server and Angular Material Design", repoURL: "https://github.com/shrey32/node-chat" }];
 
 export const SOCIAL_MEDIA = [
   {

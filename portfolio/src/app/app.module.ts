@@ -2,6 +2,7 @@ import { ContactComponent } from './views/contact/contact.component';
 import { WorkComponent } from './views/work/work.component';
 import { AboutComponent } from './views/about/about.component';
 import { HeaderComponent } from './views/header/header.component';
+import { CareerComponent } from './views/career/career.component'
 import { SkillsComponent } from './views/skills/skills.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,7 +18,8 @@ import { AppComponent } from './app.component';
     AboutComponent,
     WorkComponent,
     SkillsComponent,
-    ContactComponent
+    ContactComponent,
+    CareerComponent
   ],
   imports: [
     BrowserModule,

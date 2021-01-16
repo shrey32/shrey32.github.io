@@ -5,6 +5,7 @@ import { views } from '../../utils/constants';
 import { VIEW_ABOUT } from '../../utils/constants';
 import { VIEW_WORK } from '../../utils/constants';
 import { VIEW_SKILLS } from '../../utils/constants';
+import { VIEW_CAREER } from '../../utils/constants';
 import { VIEW_CONTACT } from '../../utils/constants';
 import { SOCIAL_MEDIA } from '../../utils/constants'
 
@@ -32,6 +33,8 @@ export class HeaderComponent implements OnInit {
       this.viewService.setViewType(ViewType.WORK);
     else if (viewType == VIEW_SKILLS)
       this.viewService.setViewType(ViewType.SKILLS);
+    else if (viewType == VIEW_CAREER)
+      this.viewService.setViewType(ViewType.CAREER);
     else if (viewType == VIEW_CONTACT)
       this.viewService.setViewType(ViewType.CONTACT);
   }
