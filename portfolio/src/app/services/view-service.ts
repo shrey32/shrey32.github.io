@@ -5,6 +5,7 @@ import { VIEW_ABOUT } from '../utils/constants';
 import { VIEW_WORK } from '../utils/constants';
 import { VIEW_SKILLS } from '../utils/constants';
 import { VIEW_CONTACT } from '../utils/constants';
+import { VIEW_CAREER } from '../utils/constants';
 
 @Injectable({
   providedIn: 'root',
@@ -24,6 +25,8 @@ export class ViewService {
       this.viewTypeStr = VIEW_WORK;
     } else if (viewType == ViewType.SKILLS) {
       this.viewTypeStr = VIEW_SKILLS;
+    } else if (viewType == ViewType.CAREER) {
+      this.viewTypeStr = VIEW_CAREER;
     } else if (viewType == ViewType.CONTACT) {
       this.viewTypeStr = VIEW_CONTACT;
     }

@@ -242,6 +242,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 class ViewService {
     constructor() {
         this.setViewType = (viewType) => {
@@ -256,6 +257,9 @@ class ViewService {
             }
             else if (viewType == _enums_view_type__WEBPACK_IMPORTED_MODULE_0__["ViewType"].SKILLS) {
                 this.viewTypeStr = _utils_constants__WEBPACK_IMPORTED_MODULE_3__["VIEW_SKILLS"];
+            }
+            else if (viewType == _enums_view_type__WEBPACK_IMPORTED_MODULE_0__["ViewType"].CAREER) {
+                this.viewTypeStr = _utils_constants__WEBPACK_IMPORTED_MODULE_3__["VIEW_CAREER"];
             }
             else if (viewType == _enums_view_type__WEBPACK_IMPORTED_MODULE_0__["ViewType"].CONTACT) {
                 this.viewTypeStr = _utils_constants__WEBPACK_IMPORTED_MODULE_3__["VIEW_CONTACT"];
